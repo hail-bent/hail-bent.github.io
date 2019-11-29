@@ -143,7 +143,19 @@ Error message and password prompt
 
 <li>$:/config/NewJournal/Title</li>
 
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions</li>
+
+<li>$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler</li>
+
 <li>$:/core</li>
+
+<li>$:/core/ui/SideBar/More</li>
+
+<li>$:/core/ui/SideBar/Tools</li>
 
 <li>$:/DefaultTiddlers</li>
 
@@ -187,7 +199,11 @@ Error message and password prompt
 
 <li>$:/temp/info-plugin</li>
 
+<li>$:/theme</li>
+
 <li>$:/themes/jd/Whitespace</li>
+
+<li>$:/themes/jd/Whitespace/config</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
 
@@ -209,6 +225,18 @@ Error message and password prompt
 <div id="storeArea" style="display:none;">
 <div created="20191123200520045" creator="Moka Lady" modified="20191123200524546" modifier="Moka Lady" title="$:/config/NewJournal/Title">
 <pre>MMM DDth, YYYY</pre>
+</div>
+<div created="20191129201152048" creator="Moka Lady" modified="20191129201254721" modifier="Moka Lady" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/control-panel">
+<pre>show</pre>
+</div>
+<div created="20191129201131313" creator="Moka Lady" modified="20191129201131314" modifier="Moka Lady" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/home">
+<pre>show</pre>
+</div>
+<div created="20191129201229228" creator="Moka Lady" modified="20191129201229228" modifier="Moka Lady" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/more-page-actions">
+<pre>show</pre>
+</div>
+<div created="20191129201143008" creator="Moka Lady" modified="20191129201143008" modifier="Moka Lady" title="$:/config/PageControlButtons/Visibility/$:/core/ui/Buttons/new-tiddler">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
 <pre>{
@@ -9403,6 +9431,42 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="{{$:/language/SideBar/More/Caption}}" modified="20191129201355066" modifier="Moka Lady" title="$:/core/ui/SideBar/More">
+<pre>&lt;div class=&quot;tc-more-sidebar&quot;&gt;
+&lt;$macrocall $name=&quot;tabs&quot; tabsList=&quot;[all[shadows+tiddlers]tag[$:/tags/MoreSideBar]!has[draft.of]]&quot; default={{$:/config/DefaultMoreSidebarTab}} state=&quot;$:/state/tab/moresidebar&quot; class=&quot;tc-vertical&quot; /&gt;
+&lt;/div&gt;</pre>
+</div>
+<div caption="{{$:/language/SideBar/Tools/Caption}}" modified="20191129201309628" modifier="Moka Lady" title="$:/core/ui/SideBar/Tools">
+<pre>\define lingo-base() $:/language/ControlPanel/
+\define config-title()
+$:/config/PageControlButtons/Visibility/$(listItem)$
+\end
+
+&lt;&lt;lingo Basics/Version/Prompt&gt;&gt; &lt;&lt;version&gt;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-icons&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-text&quot; value=&quot;yes&quot;&gt;
+
+&lt;$set name=&quot;tv-config-toolbar-class&quot; value=&quot;&quot;&gt;
+
+&lt;$list filter=&quot;[all[shadows+tiddlers]tag[$:/tags/PageControls]!has[draft.of]]&quot; variable=&quot;listItem&quot;&gt;
+
+&lt;div style=&quot;position:relative;&quot; class={{{ [&lt;listItem&gt;encodeuricomponent[]addprefix[tc-btn-]] }}}&gt;
+
+&lt;$checkbox tiddler=&lt;&lt;config-title&gt;&gt; field=&quot;text&quot; checked=&quot;show&quot; unchecked=&quot;hide&quot; default=&quot;show&quot;/&gt; &lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt;/&gt; &lt;i class=&quot;tc-muted&quot;&gt;&lt;$transclude tiddler=&lt;&lt;listItem&gt;&gt; field=&quot;description&quot;/&gt;&lt;/i&gt;
+
+&lt;/div&gt;
+
+&lt;/$list&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+
+&lt;/$set&gt;
+</pre>
+</div>
 <div created="20191123195504695" modified="20191123195505617" title="$:/DefaultTiddlers">
 <pre>Hello
 </pre>
@@ -9652,10 +9716,10 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191123195436563" modified="20191123195442906" title="$:/SiteTitle">
 <pre>Ms M L Wright</pre>
 </div>
-<div created="20191123200032164" modified="20191123200032164" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Palette</pre>
+<div created="20191123200032164" creator="Moka Lady" modified="20191129201010836" modifier="Moka Lady" title="$:/state/tab--1963855381">
+<pre>$:/themes/jd/Whitespace/config</pre>
 </div>
-<div created="20191123195009943" modified="20191123200435591" title="$:/state/tab-1749438307">
+<div created="20191123195009943" creator="Moka Lady" modified="20191129201113849" modifier="Moka Lady" title="$:/state/tab-1749438307">
 <pre>$:/core/ui/ControlPanel/Info</pre>
 </div>
 <div created="20191123195015456" modified="20191123195024855" title="$:/state/tab-2065006209">
@@ -9667,7 +9731,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191123200440485" creator="M" modified="20191123200442554" modifier="Moka Lad" title="$:/status/UserName">
 <pre>Moka Lady</pre>
 </div>
-<div list="$:/Import Hello" title="$:/StoryList">
+<div created="20191129201001778" creator="Moka Lady" list="$:/core/ui/SideBar/Recent Hello [[Moka Lady]]" modified="20191129201511781" modifier="Moka Lady" title="$:/StoryList">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9728,6 +9792,9 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
+<div created="20191129201007615" creator="Moka Lady" modified="20191129201007615" modifier="Moka Lady" title="$:/theme">
+<pre>$:/themes/jd/Whitespace</pre>
+</div>
 <div author="jd" core-version="&gt;=5.1.17" dependents="$:/themes/tiddlywiki/vanilla" description="Lots of unused, negative space; an experiment on TW5 design" list="readme config" name="Whitespace" plugin-type="theme" title="$:/themes/jd/Whitespace" type="application/json" version="0.0.18">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -9771,6 +9838,102 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         }
     }
 }</pre>
+</div>
+<div caption="Whitespace tweaks" created="20171203134043686" creator="JD" modified="20191129201029226" modifier="Moka Lady" sidebar-position="right" tags="$:/tags/ControlPanel/Appearance" title="$:/themes/jd/Whitespace/config">
+<pre>\define wsconfig(name) $:/config/Whitespace/$name$
+\define config-base() $:/config/SideBar/Visibility/
+\define config-title-sidebar()
+$(config-base)$$(currentTiddler)$
+\end
+\define drop-actions()
+&lt;$action-listops $tiddler=&quot;$:/tags/SideBar&quot; $subfilter=&quot;+[insertbefore:currentTiddler&lt;actionTiddler&gt;]&quot;/&gt;
+\end
+
+&lt;style&gt;
+.tc-control-panel table input[type=&quot;radio&quot;] { width: auto; }
+.ws-select-button {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    border: 1px solid &lt;&lt;colour primary&gt;&gt;;
+}
+.ws-disabled-btn {
+    background: &lt;&lt;colour muted-background&gt;&gt;;
+}
+.ws-enabled-btn {
+    background: &lt;&lt;colour primary&gt;&gt;;
+}
+&lt;/style&gt;
+
+&lt;table width=&quot;99%&quot;&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Sidebar width:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$edit-text tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/sidebarwidth&quot; tag=&quot;input&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Tiddler width:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$edit-text tiddler=&quot;$:/themes/tiddlywiki/vanilla/metrics/tiddlerwidth&quot; tag=&quot;input&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Limit sidebar card height:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig SidebarHeight&gt;&gt; field=&quot;text&quot; checked=&quot;limit&quot; unchecked=&quot;full&quot; default=&quot;limit&quot;/&gt;
+&lt;$list filter=&quot;[[$:/config/Whitespace/SidebarHeight]text[limit]]&quot;&gt;&lt;$edit-text tiddler=&lt;&lt;wsconfig SidebarHeight&gt;&gt; field=&quot;height&quot; tag=&quot;input&quot; placeholder=&quot;300px&quot;/&gt;&lt;/$list&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Visible scrollbars:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig scrollbar-style&gt;&gt; field=&quot;text&quot; checked=&quot;visible&quot; unchecked=&quot;invisible&quot; default=&quot;visible&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Show Sitetitle and Subtitle:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig show-sitetitle&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Show buttons on hover:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig Spacious&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Theme the tiddler edit mode:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$checkbox tiddler=&lt;&lt;wsconfig ThemeEditFrame&gt;&gt; field=&quot;text&quot; checked=&quot;yes&quot; unchecked=&quot;no&quot; default=&quot;yes&quot;/&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Sidebar position:
+&lt;/td&gt;
+&lt;td&gt;
+&lt;$radio tiddler=&quot;$:/themes/jd/Whitespace/config&quot; field=&quot;sidebar-position&quot; value=&quot;left&quot;&gt; left&lt;/$radio&gt;&lt;br&gt;
+&lt;$radio tiddler=&quot;$:/themes/jd/Whitespace/config&quot; field=&quot;sidebar-position&quot; value=&quot;right&quot;&gt; right&lt;/$radio&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.21">
 <pre>{
@@ -9884,7 +10047,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191123200405318" creator="Moka Lady" modified="20191123201752781" modifier="Moka Lady" tags="" title="Hello">
 <pre>Welcome! Setting up a new wiki for my static site. I'll lazily get around to putting all the links back in working order.</pre>
 </div>
-<div created="20191123202858928" creator="Moka Lady" modified="20191123202936898" modifier="Moka Lady" title="Moka Lady">
+<div created="20191123202858928" creator="Moka Lady" modified="20191129201543451" modifier="Moka Lady" tags="$:/tags/SideBar" title="Moka Lady">
 <pre>&lt;img alt=&quot;Would've been a picture of me.&quot; src=&quot;https://lh3.googleusercontent.com/VT5WplF6J5LJ1h3KxVIimZqKtl76eLTPwbODKzQVk9Ynij64EiE-smG2hCmsx8lWTEm0xPCEw_LdhKImrZ2CflT8O_zrAiD7gI1Q1GE1LG0gRjx8A0iQM6jTWCd2bx-w6ptLw_POIfs=w2400&quot; /&gt;</pre>
 </div>
 
