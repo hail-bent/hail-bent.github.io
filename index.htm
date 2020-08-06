@@ -155,6 +155,8 @@ Error message and password prompt
 
 <li>$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent</li>
 
+<li>$:/config/Whitespace/search</li>
+
 <li>$:/core</li>
 
 <li>$:/core/ui/SideBar/More</li>
@@ -195,6 +197,8 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/tab--1498284803</li>
+
 <li>$:/state/tab--1963855381</li>
 
 <li>$:/state/tab-1749438307</li>
@@ -208,6 +212,8 @@ Error message and password prompt
 <li>$:/StoryList</li>
 
 <li>$:/tags/SideBar</li>
+
+<li>$:/temp/advancedsearch</li>
 
 <li>$:/temp/info-plugin</li>
 
@@ -285,6 +291,9 @@ Error message and password prompt
 </div>
 <div created="20191129202224086" creator="Moka Lady" modified="20200703154923018" modifier="Moka Lady" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
 <pre>hide</pre>
+</div>
+<div created="20200806183631693" creator="Moka Lady" modified="20200806183631694" modifier="Moka Lady" title="$:/config/Whitespace/search">
+<pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
 <pre>{
@@ -9551,8 +9560,8 @@ $:/config/PageControlButtons/Visibility/$(listItem)$
 &lt;/$set&gt;
 </pre>
 </div>
-<div created="20191123195504695" creator="Moka Lady" modified="20200130193833521" modifier="Moka Lady" title="$:/DefaultTiddlers">
-<pre>[list[$:/StoryList]]</pre>
+<div created="20191123195504695" creator="Moka Lady" modified="20200806184019205" modifier="Moka Lady" title="$:/DefaultTiddlers">
+<pre>[sort[created]limit[2]]</pre>
 </div>
 <div created="20191129202705133" creator="Moka Lady" modified="20191129202757101" modifier="Moka Lady" title="$:/favicon.ico" type="image/x-icon">
 <pre>R0lGODlhEAAQAPEAAAAAAGqCmQAAAAAAACH5BAlkAAIAIf8LTkVUU0NBUEUyLjADAQAAACwAAAAAEAAQAAAC55QUISIiEoIQQoggggghiBAEgiAIQSAEQSAEQSAEgiAIgSAEgSAEgSAICASCQEAgCAQEgkBAIAgIBIKAQCAICASCgEAQCAgEgoBAEAgIBIKAQBAQCASCgEAQEAgEAYFAECAgICAgIBAQICAgECAgECAgICAgICAQICAgEBAgIBAgEBAgICAgECAgIBAgIBAQICAQICAgEBAgIBAQICAQICAgECAgIBAgICAQICAgECAgEBAgICAQICAgECAgEBAgIBAgICAgICAgIBAgIBAQEBAgICAgICAgICAgICAgEBAgQIAAAQIKAAAh+QQJZAACACwAAAAAEAAQAAAC55QkIiIiIoQQQoQQhBBCCBEIgiAIgRAEgiAIQhAEgiAIgSAEgSAIQiAICAQCgUAgEAQEAoEgEAgIBAKBQCAQBAICQSAQEAgEAoFAIBAIAoFAIBAQCAQCgUAgEAgEAkFAICAgICAgICAgICAgIBAQICAgICAgICAgICAgICAQICAgICAgICAgEBAQEBAQICAgICAQICAgEBAgICAQECAgICAgEBAgIBAgICAgEBAgICAgICAQICAQECAQEBAQECAgICAgECAgIBAQECAgIBAQECAgEBAgICAgICAgICAgIBAQIEAAAQIKAAAh+QQJZAACACwAAAAAEAAQAAAC55QkIiIiIoQQQoQQghBCCCEIgiAEgSAEgiAIgiAIgiAEgiAEgiAIgiAQCASCgEAgCAgEgkBAIBAIBIKAICAICASBgEAgEAQCgUAgIAgIAoGAQCAIBAQCgUAgCAQCAYFAECAgICAgICAQEBAgECAgEBAgICAgICAgEBAgIBAgEBAgICAgICAgEBAgICAQEBAgICAgICAgIBAgICAgEBAgICAgICAgIBAQICAgEBAQICAgICAgICAQICAgIBAQICAgICAgICAgECAgICAQECAgICAgICAgICAgICAgECAgICAgQIAAAQIKAAA7</pre>
@@ -9801,6 +9810,9 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191129223559053" creator="Moka Lady" modified="20200620041315549" modifier="Moka Lady" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
+<div created="20200806183645477" creator="Moka Lady" modified="20200806183653013" modifier="Moka Lady" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
+</div>
 <div created="20191123200032164" creator="Moka Lady" modified="20191129201010836" modifier="Moka Lady" title="$:/state/tab--1963855381">
 <pre>$:/themes/jd/Whitespace/config</pre>
 </div>
@@ -9816,10 +9828,13 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191123200440485" creator="M" modified="20191123200442554" modifier="Moka Lad" title="$:/status/UserName">
 <pre>Moka Lady</pre>
 </div>
-<div list="[[2nd Half Let's Go!]] [[Juneteenth! Freedom Day]]" title="$:/StoryList">
+<div created="20200806183631694" creator="Moka Lady" list="[[2nd Half Let's Go!]]" modified="20200806183926574" modifier="Moka Lady" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20191129201553044" creator="Moka Lady" list="[[Moka Lady]] [[How Can I Help?]] $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200213213353358" modifier="Moka Lady" title="$:/tags/SideBar">
+<pre></pre>
+</div>
+<div created="20200806183631694" creator="Moka Lady" modified="20200806184048853" modifier="Moka Lady" title="$:/temp/advancedsearch">
 <pre></pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
@@ -9867,7 +9882,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
         },
         &quot;$:/info/browser/screen/width&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/width&quot;,
-            &quot;text&quot;: &quot;1360&quot;
+            &quot;text&quot;: &quot;1366&quot;
         },
         &quot;$:/info/browser/screen/height&quot;: {
             &quot;title&quot;: &quot;$:/info/browser/screen/height&quot;,
@@ -9880,7 +9895,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20200620041547974" creator="Moka Lady" modified="20200620041550445" modifier="Moka Lady" title="$:/temp/search">
+<div created="20200620041547974" creator="Moka Lady" modified="20200806183631694" modifier="Moka Lady" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20191129201007615" creator="Moka Lady" modified="20191129201007615" modifier="Moka Lady" title="$:/theme">
