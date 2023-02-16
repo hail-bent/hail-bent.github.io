@@ -225,6 +225,8 @@ Error message and password prompt
 
 <li>$:/StoryList</li>
 
+<li>$:/style/mandala project</li>
+
 <li>$:/tags/SideBar</li>
 
 <li>$:/temp/advancedsearch</li>
@@ -369,7 +371,7 @@ Error message and password prompt
 <div created="20191129202224086" creator="Moka Lady" modified="20220826194648753" modifier="Moka Lady" title="$:/config/SideBar/Visibility/$:/core/ui/SideBar/Recent">
 <pre>show</pre>
 </div>
-<div created="20200830160111654" creator="Moka Lady" modified="20221014170147285" modifier="Moka Lady" title="$:/config/Whitespace/search">
+<div created="20200830160111654" creator="Moka Lady" modified="20230216014449334" modifier="Moka Lady" title="$:/config/Whitespace/search">
 <pre>no</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.21">
@@ -9900,11 +9902,11 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191129223559053" creator="Moka Lady" modified="20220916155100167" modifier="Moka Lady" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
-<div created="20201006221259113" creator="Moka Lady" modified="20230216004755910" modifier="Moka Lady" title="$:/state/sidebar">
+<div created="20201006221259113" creator="Moka Lady" modified="20230216014310834" modifier="Moka Lady" title="$:/state/sidebar">
 <pre>yes</pre>
 </div>
-<div created="20200830160125819" creator="Moka Lady" modified="20211008135052761" modifier="Moka Lady" title="$:/state/tab--1498284803">
-<pre>$:/core/ui/AdvancedSearch/System</pre>
+<div created="20200830160125819" creator="Moka Lady" modified="20230216014451905" modifier="Moka Lady" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Filter</pre>
 </div>
 <div created="20191123200032164" creator="Moka Lady" modified="20191129201010836" modifier="Moka Lady" title="$:/state/tab--1963855381">
 <pre>$:/themes/jd/Whitespace/config</pre>
@@ -9921,14 +9923,55 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
 <div created="20191123200440485" creator="M" modified="20191123200442554" modifier="Moka Lad" title="$:/status/UserName">
 <pre>Moka Lady</pre>
 </div>
-<div list="[[The Mandala Project]] [[I Got Nothing]]" title="$:/StoryList">
+<div created="20230216014449335" creator="Moka Lady" list="$:/AdvancedSearch [[$:/style/mandala project]] [[The Mandala Project]] [[I Got Nothing]]" modified="20230216014449335" modifier="Moka Lady" title="$:/StoryList">
 <pre></pre>
+</div>
+<div created="20230216014315946" creator="Moka Lady" modified="20230216014600189" modifier="Moka Lady" tags="$:/tags/Stylesheet" title="$:/style/mandala project" type="text/plain">
+<pre>body {
+	margin: 0;
+}
+
+.image-grid {
+	--gap: 16px;
+	--num-cols: 4;
+	--row-height: 300px;
+
+	box-sizing: border-box;
+	padding: var(--gap);
+
+	display: grid;
+	grid-template-columns: repeat(var(--num-cols), 1fr);
+	grid-auto-rows: var(--row-height);
+	gap: var(--gap);
+}
+
+.image-grid&gt;img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.image-grid-col-2 {
+	grid-column: span 2;
+}
+
+.image-grid-row-2 {
+	grid-row: span 2;
+}
+
+/* Anything udner 1024px
+@media screen and (max-width: 1024px) {
+	.image-grid {
+		--num-cols: 2;
+		--row-height: 200px;
+	}
+} */</pre>
 </div>
 <div created="20191129201553044" creator="Moka Lady" list="[[Moka Lady]] [[How Can I Help?]] $:/core/ui/SideBar/Open $:/core/ui/SideBar/Recent $:/core/ui/SideBar/Tools $:/core/ui/SideBar/More" modified="20200213213353358" modifier="Moka Lady" title="$:/tags/SideBar">
 <pre></pre>
 </div>
-<div created="20200830160111656" creator="Moka Lady" modified="20221014170147286" modifier="Moka Lady" title="$:/temp/advancedsearch">
-<pre></pre>
+<div created="20200830160111656" creator="Moka Lady" modified="20230216014520141" modifier="Moka Lady" title="$:/temp/advancedsearch">
+<pre>[all[shadows+tiddlers]tags[]is[system]sort[title]]</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9988,7 +10031,7 @@ very-muted-foreground: rgba(255,255,255,0.2)</pre>
     }
 }</pre>
 </div>
-<div created="20200620041547974" creator="Moka Lady" modified="20221014170147286" modifier="Moka Lady" title="$:/temp/search">
+<div created="20200620041547974" creator="Moka Lady" modified="20230216014449334" modifier="Moka Lady" title="$:/temp/search">
 <pre></pre>
 </div>
 <div created="20191129201007615" creator="Moka Lady" modified="20191129201007615" modifier="Moka Lady" title="$:/theme">
@@ -10449,57 +10492,17 @@ I don't know.</pre>
 <div created="20200326155123268" creator="Moka Lady" modified="20200326155948942" modifier="Moka Lady" tags="" title="The &quot;Apocalypse&quot; of 2020">
 <pre>Panicked people make things so much worse than they need to be. Social media doesn't make that any better. It's crazy to watch people devolve into nonsense and fear instead of using their rational minds about things. (Why they're called Sheeple) People claim to be so &quot;grown&quot; and &quot;woke&quot; but have no clue how to conduct themselves when the shit hits the fan. Those old adages though... &quot;An ounce of prevention is worth a pound of cure&quot; didn't create themselves.</pre>
 </div>
-<div created="20230216004759507" creator="Moka Lady" modified="20230216013508271" modifier="Moka Lady" tags="" title="The Mandala Project">
-<pre>&lt;style&gt;
-body {
-	margin: 0;
-}
-
-.image-grid {
-	--gap: 16px;
-	--num-cols: 4;
-	--row-height: 300px;
-
-	box-sizing: border-box;
-	padding: var(--gap);
-
-	display: grid;
-	grid-template-columns: repeat(var(--num-cols), 1fr);
-	grid-auto-rows: var(--row-height);
-	gap: var(--gap);
-}
-
-.image-grid&gt;img {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-}
-
-.image-grid-col-2 {
-	grid-column: span 2;
-}
-
-.image-grid-row-2 {
-	grid-row: span 2;
-}
-
-/* Anything udner 1024px
-@media screen and (max-width: 1024px) {
-	.image-grid {
-		--num-cols: 2;
-		--row-height: 200px;
-	}
-} */
-&lt;/style&gt;
-
-&lt;div class=&quot;image-grid&quot;&gt;
+<div created="20230216004759507" creator="Moka Lady" modified="20230216014634032" modifier="Moka Lady" tags="" title="The Mandala Project">
+<pre>&lt;div class=&quot;image-grid&quot;&gt;
 &lt;img class=&quot;image-grid-col-2 image-grid-row-2&quot; alt=&quot;Mandala Madness&quot; src=&quot;img/20221231_234440.jpg&quot; /&gt;
 &lt;img alt=&quot;Mandala Madness&quot; src=&quot;img/20221231_234611.jpg&quot; /&gt;
 &lt;img alt=&quot;Mandala Madness&quot; src=&quot;img/20230106_110039.jpg&quot; /&gt;
 &lt;img alt=&quot;Mandala Madness&quot; src=&quot;img/20230119_164602.jpg&quot; /&gt;
 &lt;img alt=&quot;Mandala Madness&quot; src=&quot;img/20230129_114943.jpg&quot; /&gt;
 &lt;img alt=&quot;Mandala Madness&quot; src=&quot;img/20230210_161643.jpg&quot; /&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+
+[[Styles|$:/style/mandala project]]</pre>
 </div>
 <div created="20211217215414536" creator="Moka Lady" modified="20211217220853171" modifier="Moka Lady" title="The Most Wonderful Time?">
 <pre>I've got nothing...
